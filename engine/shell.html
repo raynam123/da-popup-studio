@@ -1,0 +1,123 @@
+<title>{{TITLE}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@500;700&display=swap">
+<style>
+/* Layout: a lamp-lit desk fills the screen; a slim walnut header above, page controls floating at the foot. */
+:root{
+  --desk:#1E1510;
+  --bar:#20160F;
+  --bar-line:#3E2C1E;
+  --cream:#F6EBD3;
+  --cream-dim:#CDB892;
+  --ink:#2A2440;
+  --gold:#E2BE6A;
+  --night:#24305E;
+  --f-book:"ZCOOL XiaoWei","Songti SC","STSong","SimSun",serif;
+  --f-serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --f-ui:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  color-scheme:dark;
+}
+html{box-sizing:border-box;height:100%;background:var(--desk)}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+body{height:100%;margin:0;background:var(--desk);color:var(--cream);font-family:var(--f-ui);overflow:hidden;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+button{font:inherit;color:inherit}
+#app{height:100%;display:flex;flex-direction:column}
+#bar{flex:none;display:flex;align-items:center;gap:12px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));background:var(--bar);border-bottom:1px solid var(--bar-line);z-index:20}
+.brand{flex:1;min-width:0;display:flex;align-items:baseline;gap:10px}
+.brand b{font-family:var(--f-book);font-weight:400;font-size:24px;letter-spacing:.12em;white-space:nowrap;color:var(--cream)}
+.brand small{font-family:var(--f-serif);font-size:13px;color:var(--cream-dim);letter-spacing:.08em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:520px){.brand small{display:none}.brand b{font-size:21px}}
+.ib{flex:none;width:38px;height:38px;border-radius:10px;border:1px solid #5A4430;background:#2E2116;display:grid;place-items:center;cursor:pointer;color:var(--cream)}
+.ib svg{width:20px;height:20px}
+.pill{flex:none;height:38px;padding:0 14px 0 10px;border-radius:999px;border:1px solid #8A6A3E;background:linear-gradient(#3A2A1A,#2E2116);display:flex;align-items:center;gap:6px;cursor:pointer;color:var(--cream);font-family:var(--f-serif);font-size:14px;letter-spacing:.06em;white-space:nowrap}
+.pill svg{width:18px;height:18px;color:var(--gold)}
+.pill[aria-pressed="true"]{background:var(--gold);color:#2A1C10;border-color:var(--gold)}
+.pill[aria-pressed="true"] svg{color:#2A1C10}
+.stars{flex:none;display:flex;align-items:center;gap:5px;height:38px;padding:0 10px;border-radius:999px;color:var(--cream-dim);font-family:var(--f-serif);font-size:14px;font-variant-numeric:tabular-nums}
+.stars svg{width:17px;height:17px;color:#7A6446}
+.stars.done svg,.stars.pop svg{color:var(--gold)}
+.stars.pop{animation:spop .6s cubic-bezier(.3,1.8,.5,1)}
+@keyframes spop{40%{transform:scale(1.35)}}
+@media (max-width:420px){.pill span{display:none}.pill{padding:0 10px}.stars{padding:0 4px}}
+.ib:focus-visible,.nb:focus-visible,.pill:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+#stage{flex:1;position:relative;overflow:hidden;min-height:0;touch-action:none;background:var(--desk)}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
+.ov{position:absolute;inset:0;pointer-events:none}
+.cap{position:absolute;top:12px;left:50%;transform:translateX(-50%);font-family:var(--f-book);font-size:20px;letter-spacing:.2em;color:var(--cream);text-shadow:0 1px 6px rgba(0,0,0,.7);white-space:nowrap;transition:opacity .4s}
+.nav{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:12px;pointer-events:auto}
+.nb{width:46px;height:40px;border-radius:12px;border:1px solid #6B5238;background:rgba(46,33,22,.9);color:var(--cream);cursor:pointer;display:grid;place-items:center}
+.nb svg{width:18px;height:18px}
+.nb[disabled]{opacity:.35;cursor:default}
+.pg{font-family:var(--f-serif);font-size:14px;color:var(--cream);min-width:96px;text-align:center;text-shadow:0 1px 4px rgba(0,0,0,.7);font-variant-numeric:tabular-nums}
+.hint{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(66px + env(safe-area-inset-bottom,0px));max-width:calc(100% - 32px);width:max-content;text-align:center;text-wrap:balance;font-family:var(--f-serif);font-size:14px;color:var(--cream);background:rgba(30,21,16,.72);border:1px solid rgba(226,190,106,.35);border-radius:999px;padding:7px 16px;transition:opacity .4s}
+.bubbles{position:absolute;inset:0;overflow:hidden}
+.bub{position:absolute;transform:translate(-50%,-100%);max-width:min(240px,70vw);background:#FFF9EC;color:var(--ink);border:1.5px solid #2A2440;border-radius:14px;padding:7px 12px;font-family:var(--f-book);font-size:16px;line-height:1.45;box-shadow:0 4px 0 rgba(42,36,64,.85);animation:bin .35s cubic-bezier(.3,1.6,.5,1) both;text-align:center}
+.bub::after{content:"";position:absolute;left:50%;bottom:-8px;width:12px;height:12px;background:#FFF9EC;border-right:1.5px solid #2A2440;border-bottom:1.5px solid #2A2440;transform:translateX(-50%) rotate(45deg)}
+.bub.out{animation:bout .25s ease-in both}
+@keyframes bin{from{opacity:0;transform:translate(-50%,-100%) scale(.4)}to{opacity:1;transform:translate(-50%,-100%) scale(1)}}
+@keyframes bout{to{opacity:0;transform:translate(-50%,-100%) scale(.7)}}
+#loading{position:absolute;inset:0;display:grid;place-items:center;background:var(--desk);z-index:30;transition:opacity .5s}
+#loading .box{text-align:center;font-family:var(--f-book);color:var(--cream)}
+#loading .t{font-size:30px;letter-spacing:.2em;margin-bottom:12px}
+#loading .bar{width:200px;height:4px;border-radius:2px;background:#3E2C1E;overflow:hidden;margin:0 auto}
+#loading .bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .2s}
+#toast{position:absolute;left:50%;top:14px;transform:translate(-50%,-30px);opacity:0;z-index:50;background:var(--bar);color:var(--cream);font-family:var(--f-serif);font-size:15px;padding:8px 16px;border-radius:10px;pointer-events:none;transition:opacity .25s,transform .25s;max-width:calc(100% - 32px);text-align:center}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.story{display:none;position:absolute;left:50%;transform:translateX(-50%);bottom:calc(112px + env(safe-area-inset-bottom,0px));width:min(360px,calc(100% - 32px));background:#FFF8E8;color:var(--ink);border-radius:14px;padding:12px 16px;font-family:var(--f-book);font-size:17px;line-height:1.6;box-shadow:0 6px 18px rgba(0,0,0,.4);transition:opacity .35s}
+.story p{margin:0}
+.portrait .story{display:block}
+.story.off{opacity:0}
+/* film mode: clean frame for video export */
+.ftitle,.fsub,.endcard{display:none}
+body.film #bar,body.film .nav,body.film .hint,body.film .story,body.film #toast,body.film .cap,body.film #loading{display:none!important}
+body.film .ftitle,body.film .fsub{display:block}
+body.film .endcard{display:grid}
+.ftitle{position:absolute;left:64px;top:52px;opacity:0;font-family:var(--f-book);color:var(--cream);text-shadow:0 2px 12px rgba(0,0,0,.75)}
+.ftitle small{display:block;font-size:26px;letter-spacing:.3em;color:var(--gold)}
+.ftitle b{display:block;font-weight:400;font-size:52px;letter-spacing:.18em;margin-top:2px}
+.ftitle i{display:block;width:120px;height:3px;margin-top:12px;background:linear-gradient(90deg,var(--gold),rgba(226,190,106,0))}
+.fsub{position:absolute;left:50%;bottom:56px;transform:translateX(-50%);opacity:0;white-space:nowrap;font-family:var(--f-book);font-size:36px;letter-spacing:.06em;color:#FFF8E8;text-shadow:0 2px 10px rgba(0,0,0,.85);background:rgba(20,13,9,.6);padding:10px 30px;border-radius:14px}
+.endcard{position:absolute;inset:0;place-items:center;opacity:0;background:radial-gradient(ellipse at center,rgba(14,10,8,.55),rgba(14,10,8,.82))}
+.endcard .ec{text-align:center;font-family:var(--f-book)}
+.endcard b{display:block;font-weight:400;font-size:104px;letter-spacing:.16em;color:#F6DB98;text-shadow:0 4px 24px rgba(0,0,0,.6)}
+.endcard small{display:block;margin-top:18px;font-size:34px;letter-spacing:.3em;color:var(--cream)}
+.endcard em{display:block;font-style:normal;color:var(--gold);font-size:30px;letter-spacing:1em;margin:0 0 18px 1em}
+.bub .en,.fsub .en{display:block;font-family:Georgia,"Times New Roman",var(--f-serif);font-size:.66em;letter-spacing:.01em;line-height:1.3;margin-top:3px;opacity:.92}
+body.film .bub{font-size:28px;padding:10px 20px;border-radius:18px;border-width:2px;max-width:520px;box-shadow:0 5px 0 rgba(42,36,64,.85)}
+@media (prefers-reduced-motion:reduce){.bub{animation-duration:.01s}}
+</style>
+
+<div id="app">
+  <header id="bar">
+    <div class="brand"><b>{{TITLE}}</b><small>纸艺立体书 · {{SPREADS}}个跨页</small></div>
+    <div class="stars" id="stars" title="每页都藏着一颗金色小星星" aria-label="找到的星星"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="currentColor"/></svg><b>0/5</b></div>
+    <button class="pill" id="demo" aria-pressed="false"><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg><svg class="i-stop" viewBox="0 0 24 24" aria-hidden="true" hidden><rect x="7" y="7" width="10" height="10" rx="2" fill="currentColor"/></svg><span>自动演示</span></button>
+    <button class="ib" id="mute" aria-label="静音" aria-pressed="false">
+      <svg id="ico-snd" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <svg id="ico-mute" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 9l6 6M22 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+  <main id="stage">
+    <canvas id="cv"></canvas>
+    <div class="ov">
+      <div class="cap" id="cap">{{TITLE}}</div>
+      <div class="bubbles" id="bubbles"></div>
+      <div class="story off" id="story" aria-live="polite"></div>
+      <div class="hint" id="hint">点 ▶ 或向左拖动书页，翻开立体书</div>
+      <div class="nav">
+        <button class="nb" id="prev" aria-label="上一页"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="pg" id="pg">封面</div>
+        <button class="nb" id="next" aria-label="下一页"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <div class="ftitle" id="ftitle"><small id="fnum"></small><b id="ftext"></b><i></i></div>
+    <div class="fsub" id="fsub"></div>
+    <div class="endcard" id="endcard"><div class="ec"><em>✦ ✦ ✦</em><b>{{TITLE}}</b><small>{{SUB}}</small></div></div>
+    <div id="loading"><div class="box"><div class="t">{{TITLE}}</div><div class="bar"><i id="loadbar"></i></div></div></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </main>
+</div>
+{{SCRIPTS}}

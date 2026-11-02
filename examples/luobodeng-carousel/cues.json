@@ -1,0 +1,72 @@
+{
+ "narrator": "旁白",
+ "carousel": {
+  "cue": {
+   "1": [
+    "S1-03",
+    0.3
+   ],
+   "2": [
+    "S2-03",
+    0.5
+   ],
+   "3": [
+    "S3-02",
+    0
+   ],
+   "4": [
+    "S4-04",
+    0
+   ],
+   "5": [
+    "S5-02",
+    0
+   ],
+   "6": [
+    "S6-03",
+    0
+   ],
+   "7": [
+    "S7-02",
+    -0.3
+   ]
+  }
+ },
+ "en": {
+  "S0-01": "On Halloween night, a little turnip lantern lit up. It has a two-thousand-year story to tell.",
+  "S1-01": "My story begins with a bonfire, two thousand years ago.",
+  "S1-02": "Back then in Ireland, the Celts had just gathered the last sheaf of wheat.",
+  "S1-03": "They celebrated Samhain, lighting bonfires to welcome the winter.",
+  "S1-04": "The fire is so warm! Winter is coming!",
+  "S1-05": "They say tonight, the door between two worlds grows thin!",
+  "S2-01": "Legend says that on this night, mischievous spirits slip into our world.",
+  "S2-02": "Ooh? What's all this fun?",
+  "S2-03": "Put on your masks, so the spirits think we're one of them!",
+  "S2-04": "I'm a little deer! Shh, don't laugh.",
+  "S2-05": "And that's how Halloween costumes began.",
+  "S3-01": "Many years later, November 1st became All Saints' Day.",
+  "S3-02": "Dong, dong. Light a candle, and remember someone dear.",
+  "S3-03": "The night before was called All Hallows' Eve.",
+  "S3-04": "Say it fast enough, and it becomes Halloween!",
+  "S4-01": "The Irish also loved telling the tale of Stingy Jack.",
+  "S4-02": "Let me down! I promise I won't bother you anymore!",
+  "S4-03": "Heh heh, a promise is a promise.",
+  "S4-04": "Jack had nowhere to go, so he wandered the night with a turnip lantern.",
+  "S4-05": "That lantern... is my ancestor!",
+  "S5-01": "Later, on Halloween night, children went singing from door to door.",
+  "S5-02": "Knock knock, we've come to sing!",
+  "S5-03": "Here you go, warm soul cakes.",
+  "S5-04": "Wuwu, shine a little brighter! On to the next house!",
+  "S5-05": "In Scotland, children also dressed up and performed for treats.",
+  "S6-01": "Later still, many Irish people sailed far away to America.",
+  "S6-02": "Look, our new home! The pumpkins are huge!",
+  "S6-03": "No turnips here? Then... catch my flame!",
+  "S6-04": "I... I'm glowing?",
+  "S6-05": "And that's how the jack-o'-lantern was born.",
+  "S7-01": "Today, every October 31st, kids dress up as witches, ghosts and kittens.",
+  "S7-02": "Trick or treat!",
+  "S7-03": "Two thousand years... that's a long time.",
+  "S7-04": "So every lantern lights the way home.",
+  "S7-05": "Happy Halloween! Tonight, save a candy for the little guests at your door."
+ }
+}
