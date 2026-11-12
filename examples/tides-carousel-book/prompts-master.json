@@ -1,0 +1,36 @@
+{
+  "project": "Tides 360-degree Carousel Pop-up Book",
+  "style": "Watercolor-papercraft, layered die-cut, shadow-box pop-up, 360 degree carousel book, no text, no numbers, no labels, no captions",
+  "pages": [
+    {
+      "page_number": 1,
+      "title": "Lực Hấp Dẫn",
+      "master_prompt": "A multi-layer papercraft diorama in soft watercolor wash style, no text no numbers no labels. Deep indigo-to-violet night sky background made of torn watercolor paper, scattered tiny silver-foil star dots, wispy cotton-like paper clouds. Midground: three celestial bodies arranged on a diagonal axis for depth — a large radiant orange-yellow sun (upper corner, layered paper sunburst rays) — a blue-green Earth sphere at center with raised paper-cut continents — a small grey cratered moon (lower corner, positioned much closer to Earth than the sun). Two ribbon-like curved paper strokes represent gravitational pull: a thick bold ribbon connecting Moon-Earth, a thinner fainter ribbon connecting Sun-Earth. Foreground: ocean water rendered as two stacked paper layers — a flat pale-blue sea layer and a raised 3D paper bulge layer swelling toward the moon's direction, small quilled spiral paper waves around the bulge. Shadow-box depth with soft drop shadows between layers. Cinematic diorama lighting, pastel watercolor bleed edges, tactile paper texture, no flat illustration — physical layered paper craft look."
+    },
+    {
+      "page_number": 2,
+      "title": "Lực Ly Tâm",
+      "master_prompt": "Papercraft watercolor diorama, no text no numbers no labels. Dark navy-black space background with a faint translucent vellum ring suggesting orbital motion, swirling ink-wash motion streaks. Midground: Earth centered, axis tilted ~23 degrees shown as a thin paper rod through the poles, raised paper continents, a curved ribbon of paper wrapping the equator tapering to a point (no arrowhead) indicating spin direction, small moon anchor-point to one side. Foreground: two symmetric water bulges on opposite sides of Earth — far-side bulge and near-side bulge — built with foam-spacer layered shadow-box technique for natural cast shadows, emphasizing symmetry. Soft pastel watercolor textures, tactile layered paper, diorama lighting with visible depth gaps between layers."
+    },
+    {
+      "page_number": 3,
+      "title": "Triều Cường",
+      "master_prompt": "Papercraft watercolor diorama, no text no numbers no labels. Deep dark-blue space background, clean minimalist layout. Midground: Sun, Moon, and Earth precisely aligned in a straight horizontal axis, made of textured layered watercolor paper with clean shadow gaps. Foreground: coastline with dramatically towering ocean waves rising high, layered cut-paper waves showing powerful surge, steep vertical depth layers using foam spacers. Bright dramatic lighting illuminating the alignment axis, clean paper edges, tactile watercolor look."
+    },
+    {
+      "page_number": 4,
+      "title": "Bán Nhật Triều & Nhật Triều",
+      "master_prompt": "Papercraft watercolor diorama, no text no numbers no labels. Split-view diorama background showing day sky on one half and night starry sky on the other. Midground: coastal landscape with a paper-crafted sun and moon floating on mechanical tracks, rotating wheel mechanism concept. Foreground: seashore water level rising and falling in rhythmic dual waves, layered paper cutouts showing tidal cycles. Soft watercolor wash, clean physical papercraft aesthetic, shadow-box depth."
+    },
+    {
+      "page_number": 5,
+      "title": "Thủy Triều Đỏ",
+      "master_prompt": "Papercraft watercolor diorama, no text no numbers no labels. Atmospheric background with murky greenish-blue water fading into deep tones. Midground: coastal ecosystem where the water surface turns into vibrant, glowing crimson-red and coral watercolor washes representing algal bloom, tiny cut-paper fish silhouettes swimming away. Foreground: layered paper waves tinged with deep red ink bleeding into water, moody dramatic lighting, tactile paper texture, high contrast between clean paper and organic watercolor spread."
+    },
+    {
+      "page_number": 6,
+      "title": "Thủy Triều Đen",
+      "master_prompt": "Papercraft watercolor diorama, no text no numbers no labels. Industrial coastal background, dark moody gray sky. Midground: dark glossy oil slicks rendered with thick translucent dark resin-like paper layers spreading across the blue ocean surface, contrasting starkly with clean paper elements. Foreground: polluted coastal shore with dark patches, distressed paper textures, somber lighting, environmental hazard theme visualized purely through abstract papercraft layers and color blocking."
+    }
+  ]
+}
